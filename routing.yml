@@ -1,0 +1,101 @@
+espace_homepage:
+    path:     /
+    defaults: { _controller: EspaceBundle:Default:index }
+
+
+modifier_espace_client:
+    path: /client/espace/modifier{id}
+    defaults: { _controller: EspaceBundle:Espace:modifierespace}
+
+ajouter_espace_client:
+    path:     /client/ajouter_espace
+    defaults: { _controller: EspaceBundle:Espace:create }
+
+map:
+  path:     /map/{id}
+  defaults: { _controller: EspaceBundle:Espace:map }
+
+
+
+
+ajouter_album_client:
+    path:     /client/album/{id}
+    defaults: { _controller: EspaceBundle:Espace:album }
+
+espace_client:
+        path:     /client/espace_client
+        defaults: { _controller: EspaceBundle:Espace:afficher }
+
+offre_espace:
+       path:    /client/offre_espace
+       defaults: { _controller: EspaceBundle:Espace:Liste_espace }
+
+
+
+offre_promotion:
+  path:    /client/offre_promotion
+  defaults: { _controller: EspaceBundle:Espace:Liste_promotion}
+
+
+
+verif:
+  path:    /client/verif
+  defaults: { _controller: EspaceBundle:Espace:verif}
+
+
+
+
+
+
+info_espace:
+       path:    /client/info_espace/{id}
+       defaults: { _controller: EspaceBundle:Espace:infoespace }
+
+ajouter_commentaire:
+       path:   /client/info_espace/commentaire/{id}
+       defaults: { _controller: EspaceBundle:Espace:ajouter_commentaire }
+
+supprimer_commentaire:
+      path:  /client/info_espace/supprimer_com/{id}/{espace}
+      defaults: { _controller: EspaceBundle:Espace:supprimer_commentaire}
+
+modifier_espaceparclient:
+     path:  /client/offre_espace/modifier{id_esp}
+     defaults: { _controller: EspaceBundle:Espace:modifierparclient}
+
+
+
+ajout:
+  path:     /ajouter
+  defaults: { _controller: EspaceBundle:Promotion:ajouter }
+
+
+
+affiche:
+  path:     /afficher
+  defaults: { _controller: EspaceBundle:Promotion:afficher }
+
+
+update:
+  path:     /update/{id}
+  defaults: { _controller: EspaceBundle:Promotion:update }
+
+delete_promotion:
+  path:    /delete/{id}
+  defaults: { _controller: EspaceBundle:Promotion:delete }
+
+
+
+
+
+
+
+
+
+
+
+
+
+fos_user_group:
+  resource: "@FOSUserBundle/Resources/config/routing/group.xml"
+  prefix: /group
